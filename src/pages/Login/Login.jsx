@@ -28,6 +28,7 @@ const Login = () => {
       // Guardar token en localStorage para mantener sesión
       localStorage.setItem('token', data.token)
       localStorage.setItem('greeting', data.greeting);
+      localStorage.setItem('conversationId', data.conversationId);
 
       // Redirigir a dashboard tras login exitoso
       navigate('/dashboard')

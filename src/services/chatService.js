@@ -1,5 +1,6 @@
 // services/chatService.js
 export const sendChatMessage = async (prompt, token) => {
+    const conversationId = localStorage.getItem('conversationId') || 'conv_default';
     try {
         const response = await fetch('https://aureapi-933872953103.us-central1.run.app/api_pymeup/financial1', {
             method: 'POST',
@@ -8,7 +9,7 @@ export const sendChatMessage = async (prompt, token) => {
                 Authorization: `Bearer ${token}`,
             },
             body: JSON.stringify({
-                conversation_id: 'conv12',
+                conversation_id: conversationId,
                 prompt,
             }),
         });

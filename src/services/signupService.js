@@ -12,6 +12,11 @@ export const signupUser = async ({ email, password, name }) => {
         throw new Error(error.message || 'Error en el registro')
     }
 
-    const data = await response.json()
-    return data
+    const data = await response.json();
+    // Generar un ID de conversación único para el nuevo usuario
+    const conversationId = 'conv_' + Math.random().toString(36).substr(2, 9);
+    return {
+        ...data,
+        conversationId // Incluir el ID de conversación en la respuesta
+    };
 }

@@ -26,6 +26,9 @@ const SignUp = () => {
             const response = await signupUser({ name, email, password })
             setLoading(false)
             setSuccess(true)
+            if (response.conversationId) {
+                localStorage.setItem('conversationId', response.conversationId);
+            }
             setName('')
             setEmail('')
             setPassword('')

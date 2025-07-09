@@ -17,7 +17,12 @@ export const loginUser = async (email, password) => {
         }
 
         const data = await response.json();
-        return data;
+        // Generar o usar un ID de conversación existente
+        const conversationId = data.conversationId || 'conv_' + Math.random().toString(36).substr(2, 9);
+        return {
+            ...data,
+            conversationId
+        };
     } catch (error) {
         throw error;
     }
