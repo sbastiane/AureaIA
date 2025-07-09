@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        font-family: 'Inter', sans-serif;
+        color: white;
+    }
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto !important;
+}
