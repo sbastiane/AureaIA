@@ -1,4 +1,4 @@
-# 🌐 PymeUp
+# 🌐 AureaIA
 **PymeUp** es una plataforma inteligente diseñada para ayudar a pequeñas y medianas empresas (PYMEs) a optimizar su gestión financiera mediante análisis en tiempo real y recomendaciones inteligentes.
 
 Este repositorio contiene el desarrollo de la aplicación web de PymeUp.
